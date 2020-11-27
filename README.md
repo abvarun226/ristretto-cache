@@ -1,6 +1,6 @@
 # Ristretto Cache
 
-An experiment designing a cache library in Go using [Ristretto](github.com/dgraph-io/ristretto) as the store.
+An experiment designing a cache library in Go using [Ristretto](https://github.com/dgraph-io/ristretto) as the store.
 
 ## How to execute?
 

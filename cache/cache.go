@@ -30,9 +30,6 @@ type Store struct {
 
 // Get method to retrieve the value of a key. If not present, returns false.
 func (s *Store) Get(key string) (string, bool) {
-	s.l.RLock()
-	defer s.l.RUnlock()
-
 	var value string
 	val, found := s.store.Get(key)
 	if found {
@@ -43,9 +40,6 @@ func (s *Store) Get(key string) (string, bool) {
 
 // Delete method to delete a key from cahce.
 func (s *Store) Delete(key string) {
-	s.l.Lock()
-	defer s.l.Unlock()
-
 	s.store.Del(key)
 }
 
